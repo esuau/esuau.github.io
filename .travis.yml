@@ -20,4 +20,4 @@ deploy:
   local-dir: dist/
   target-branch: master
   on:
-    branch: gh-pages
+    branch: release
