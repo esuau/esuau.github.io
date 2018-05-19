@@ -1,10 +1,10 @@
-import { Esuau.Github.IoPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('esuau.github.io App', () => {
-  let page: Esuau.Github.IoPage;
+describe('workspace-project App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new Esuau.Github.IoPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
