@@ -11,3 +11,13 @@ before_script:
 
 script:
   - ng build --prod
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dist/
+  target-branch: master
+  on:
+    branch: gh-pages
