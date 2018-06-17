@@ -2,4 +2,14 @@
   <button mat-button>Evan Suau</button>
 </mat-toolbar>
 
-<app-bio></app-bio>
+<mat-sidenav-container fxLayout="row" fxLayoutAlign="stretch">
+  <mat-sidenav mode="side" opened="true" fxLayout="column">
+    <button mat-button color="primary">
+      <mat-icon>person_outline</mat-icon>
+      BIO
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-bio></app-bio>
+  </mat-sidenav-content>
+</mat-sidenav-container>
