@@ -9,5 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
+  navItems = [
+    { icon: 'person_outline', route: '', label: 'Bio' },
+    { icon: 'description', route: '', label: 'Resume' },
+    { icon: 'question_answer', route: '', label: 'Contact' }
+  ]
   constructor(private breakpointObserver: BreakpointObserver) {}
 }

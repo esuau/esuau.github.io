@@ -5,20 +5,10 @@
     [opened]="!(isHandset | async)!.matches">
     <mat-toolbar color="primary">Evan Suau</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="">
-        <mat-icon>person_outline</mat-icon>
+      <a mat-list-item *ngFor="let item of navItems" [routerLink]="item.route">
+        <mat-icon>{{ item.icon }}</mat-icon>
         &nbsp;
-        Bio
-      </a>
-      <a mat-list-item routerLink="resume">
-        <mat-icon>description</mat-icon>
-        &nbsp;
-        Resume
-      </a>
-      <a mat-list-item routerLink="contact">
-        <mat-icon>question_answer</mat-icon>
-        &nbsp;
-        Contact
+        {{ item.label }}
       </a>
     </mat-nav-list>
   </mat-sidenav>
