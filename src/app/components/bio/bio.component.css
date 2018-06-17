@@ -1,0 +1,26 @@
+mat-card-header {
+  text-align: center;
+}
+
+mat-card-title h1 {
+  margin-bottom: 0;
+}
+
+.header-image {
+  background-image: url('../../../assets/evan.jpg');
+  background-size: cover;
+  margin: 20px auto;
+  height: 150px;
+  width: 150px;
+}
+
+mat-card-content p {
+  font-weight: 200;
+  font-size: 18px;
+  padding: 0 50px;
+  text-align: center;
+}
+
+a {
+  color: lightblue;
+}
