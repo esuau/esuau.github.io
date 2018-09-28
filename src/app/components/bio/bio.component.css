@@ -1,3 +1,7 @@
+mat-card {
+  margin-top: 100px;
+}
+
 mat-card-header {
   text-align: center;
 }
@@ -9,9 +13,10 @@ mat-card-title h1 {
 .header-image {
   background-image: url('../../../assets/evan.jpg');
   background-size: cover;
-  margin: 20px auto;
+  margin: -100px auto 20px auto;
   height: 150px;
   width: 150px;
+  border: 10px solid rgb(48, 48, 48);
 }
 
 mat-card-content p {
