@@ -4,10 +4,12 @@ import { ClarityModule } from '@clr/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BioComponent } from './components/bio/bio.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BioComponent
   ],
   imports: [
     BrowserModule,
