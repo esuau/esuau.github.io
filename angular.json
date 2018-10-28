@@ -3,17 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "esuau": {
+    "evan-suau": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/evan-suau",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,8 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/theme.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -44,25 +47,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "esuau:build"
+            "browserTarget": "evan-suau:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "esuau:build:production"
+              "browserTarget": "evan-suau:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "esuau:build"
+            "browserTarget": "evan-suau:build"
           }
         },
         "test": {
@@ -73,7 +83,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -96,15 +106,21 @@
         }
       }
     },
-    "esuau-e2e": {
+    "evan-suau-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "esuau:serve"
+            "devServerTarget": "evan-suau:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "evan-suau:serve:production"
+            }
           }
         },
         "lint": {
@@ -119,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "esuau"
+  "defaultProject": "evan-suau"
 }

@@ -1,10 +1,6 @@
-[![Build Status](https://travis-ci.org/esuau/esuau.github.io.svg?branch=release)](https://travis-ci.org/esuau/esuau.github.io)
+# EvanSuau
 
-# Esuau
-
-My personal webpage available on https://esuau.github.io/
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 ## Development server
 
