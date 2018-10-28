@@ -1,11 +1,11 @@
-<div class="main-container">
-  <header class="header">
+<clr-main-container>
+  <clr-header>
     <div class="branding">
       <a routerLink="" class="nav-link">
         <span class="title">Evan Suau</span>
       </a>
     </div>
-    <div class="header-nav">
+    <div class="header-nav" [clr-nav-level]="1">
       <a routerLink="" class="nav-link">
         <span class="nav-text">About me</span>
       </a>
@@ -15,12 +15,12 @@
         <img src="assets/github-light.png" alt="GitHub" />
       </a>
     </div>
-  </header>
+  </clr-header>
   <div class="content-container">
     <div class="content-area">
       <router-outlet></router-outlet>
     </div>
-    <clr-vertical-nav>
+    <clr-vertical-nav [clr-nav-level]="2">
       <a clrVerticalNavLink routerLink="" routerLinkActive="active">
         <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
         Bio
@@ -35,4 +35,4 @@
       </a>
     </clr-vertical-nav>
   </div>
-</div>
+</clr-main-container>
