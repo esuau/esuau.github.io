@@ -6,11 +6,13 @@ import { ClarityModule } from '@clr/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BioComponent } from './components/bio/bio.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BioComponent
+    BioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
