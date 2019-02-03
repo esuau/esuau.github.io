@@ -1,16 +1,13 @@
 language: node_js
 node_js:
-  - "10"
+  - "11"
 
 branches:
   except:
   - master
 
-before_script:
-  - npm install -g @angular/cli
-
 script:
-  - ng build --prod
+  - npm run build
 
 deploy:
   provider: pages
