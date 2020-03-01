@@ -1,0 +1,21 @@
+name: Build and deploy
+
+on: 
+  push:
+    branches-ignore:
+    - master
+
+jobs:
+  build:
+    name: Greeting
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm install
+    - name: Build app
+      run: npm run build -- --prod
+      
