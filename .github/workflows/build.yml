@@ -1,13 +1,14 @@
-name: Build and deploy
+name: Build app
 
 on: 
   push:
     branches-ignore:
     - master
+    - release
 
 jobs:
   build:
-    name: Greeting
+    name: Build app
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -16,6 +17,6 @@ jobs:
         node-version: '12.x'
     - name: Install dependencies
       run: npm install
-    - name: Build app
+    - name: Run Angular build
       run: npm run build -- --prod
       
