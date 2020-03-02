@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ClarityModule } from '@clr/angular';
 
 import { BioComponent } from './bio.component';
 
@@ -8,6 +9,7 @@ describe('BioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ ClarityModule ],
       declarations: [ BioComponent ]
     })
     .compileComponents();
