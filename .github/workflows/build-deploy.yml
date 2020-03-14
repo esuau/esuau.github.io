@@ -1,0 +1,41 @@
+name: Build and deploy
+
+on: 
+  push:
+    branches:
+    - release
+
+jobs:
+  test:
+    name: Test app
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm install
+    - name: Run unit tests
+      run: npm run test 
+  build:
+    name: Publish app
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm install
+    - name: Run Angular build
+      run: npm run build -- --prod
+    - name: Deploy
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: master
+        build_dir: dist/evan-suau/
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
