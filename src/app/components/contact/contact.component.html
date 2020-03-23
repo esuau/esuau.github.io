@@ -9,19 +9,18 @@
       <div class="card-block">
         <div class="card-text">
           <h5>Location</h5>
-          Paris, France
+          Montreal, QC, Canada
           <h5>Email</h5>
           <button
             *ngIf="!emailVisible"
+            id="btn-email-mask"
             class="btn btn-outline"
             (click)="showEmail()"
           >
             <clr-icon shape="envelope"></clr-icon>
             Show email address
           </button>
-          <a *ngIf="emailVisible" href="mailto:evan.suau@outlook.com">evan.suau@outlook.com</a>
-          <h5>Skype</h5>
-          evan.suau
+          <a *ngIf="emailVisible" href="mailto:{{emailAddress}}">{{emailAddress}}</a>
           <h5>Social media</h5>
           <div class="clr-row">
             <div class="filler"></div>
