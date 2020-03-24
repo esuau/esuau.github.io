@@ -16,6 +16,8 @@ export class ContactComponent implements OnInit {
     { name: 'linkedin', link: 'https://www.linkedin.com/in/evansuau' }
   ];
 
+  pgpKeyId = '0x4A2EE6EF801BD78F';
+
   constructor() { }
 
   ngOnInit() {
