@@ -21,6 +21,14 @@
             Show email address
           </button>
           <a *ngIf="emailVisible" href="mailto:{{emailAddress}}">{{emailAddress}}</a>
+          <h5>Encryption</h5>
+          <a
+            class="btn btn-outline"
+            rel="noopener noreferrer"
+            href="https://keyserver.pgp.com/vkd/DownloadKey.event?keyid=0xA2E4BF362DFE49CB">
+            <clr-icon shape="lock"></clr-icon>
+            Download PGP public key
+          </a>
           <h5>Social media</h5>
           <div class="clr-row">
             <div class="filler"></div>
