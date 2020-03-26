@@ -4,6 +4,7 @@ import { BioComponent } from './components/bio/bio.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 const routes: Routes = [
   { path: 'bio', component: BioComponent },
   { path: 'resume', component: ResumeComponent },
