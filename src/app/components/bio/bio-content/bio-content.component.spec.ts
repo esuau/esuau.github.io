@@ -1,32 +1,27 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BioComponent } from './bio.component';
+import { BioContentComponent } from './bio-content.component';
 
-describe('BioComponent', () => {
-  let component: BioComponent;
-  let fixture: ComponentFixture<BioComponent>;
+describe('BioContentComponent', () => {
+  let component: BioContentComponent;
+  let fixture: ComponentFixture<BioContentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BioComponent ],
+      declarations: [ BioContentComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BioComponent);
+    fixture = TestBed.createComponent(BioContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('shoud include bio-content component', () => {
-    const bioContent = fixture.debugElement.nativeElement.querySelector('app-bio-content');
-    expect(bioContent).not.toBeNull();
   });
 });
