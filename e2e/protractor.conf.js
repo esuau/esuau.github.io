@@ -15,11 +15,10 @@ exports.config = {
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
-      args: [ '--headless' ]
+      args: [ '--headless', '--no-sandbox', '--disable-gpu']
     },
   },
   directConnect: false,
-  seleniumAddress: 'http://localhost:4444/wd/hub',
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
