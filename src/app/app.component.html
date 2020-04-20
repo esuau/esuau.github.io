@@ -5,11 +5,6 @@
         <span class="title">Evan Suau</span>
       </a>
     </div>
-    <div class="header-nav" [clr-nav-level]="1">
-      <a routerLink="" class="nav-link">
-        <span class="nav-text">About me</span>
-      </a>
-    </div>
     <div class="header-actions">
       <a
         class="nav-link nav-text"
@@ -25,13 +20,13 @@
     <div class="content-area">
       <router-outlet></router-outlet>
     </div>
-    <clr-vertical-nav [clr-nav-level]="2" [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom">
+    <clr-vertical-nav [clr-nav-level]="1" [clrVerticalNavCollapsible]="true" class="has-nav-groups nav-trigger--bottom">
       <a clrVerticalNavLink routerLink="bio" routerLinkActive="active">
         <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
         Bio
       </a>
       <a clrVerticalNavLink routerLink="resume" routerLinkActive="active">
-        <clr-icon clrVerticalNavIcon shape="file"></clr-icon>
+        <clr-icon clrVerticalNavIcon shape="briefcase"></clr-icon>
         Resume
       </a>
       <a clrVerticalNavLink routerLink="contact" routerLinkActive="active">
