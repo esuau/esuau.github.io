@@ -52,5 +52,5 @@ jobs:
       run: |
         yarn install && yarn update-webdriver --versions.chrome=80.0.3987.106
     - name: Run end-to-end tests
-      run: yarn e2e
+      run: yarn e2e --webdriverUpdate=false
       
