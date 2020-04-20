@@ -1,16 +1,21 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should reroute to /bio', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('evan-suau app is running!');
+    expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '#/bio');
+  });
+
+  it('should make bio navlink active', () => {
+    page.navigateTo();
+    expect(page.getBioNavLink().getAttribute('class')).toContain('active');
   });
 
   afterEach(async () => {

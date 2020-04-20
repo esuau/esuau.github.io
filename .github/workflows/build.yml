@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    name: Test app
+    name: Unit tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -31,10 +31,9 @@ jobs:
       run: yarn install
     - name: Run unit tests
       run: yarn test
-  build:
-    name: Build app
+  e2e:
+    name: End-to-end tests
     runs-on: ubuntu-latest
-    needs: test
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
@@ -50,7 +49,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-yarn-
     - name: Install dependencies
-      run: yarn install
-    - name: Run Angular build
-      run: yarn build
+      run: |
+        yarn install && yarn update-webdriver --versions.chrome=80.0.3987.106
+    - name: Run end-to-end tests
+      run: yarn e2e --webdriverUpdate=false
       
