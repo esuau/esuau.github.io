@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showEmail() {
+  showEmail(): void {
     this.emailVisible = true;
   }
 

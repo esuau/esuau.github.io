@@ -7,13 +7,16 @@ describe('BioContentComponent', () => {
   let component: BioContentComponent;
   let fixture: ComponentFixture<BioContentComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ BioContentComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [
+        BioContentComponent
+      ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BioContentComponent);

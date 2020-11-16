@@ -1,6 +1,6 @@
 name: Build and deploy
 
-on: 
+on:
   push:
     branches:
     - release
@@ -53,7 +53,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1
       with:
         target_branch: master
-        build_dir: dist/evan-suau/
+        build_dir: dist/esuau/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      

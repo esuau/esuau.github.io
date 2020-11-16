@@ -1,6 +1,6 @@
 name: Test and build
 
-on: 
+on:
   push:
     branches-ignore:
     - master
@@ -50,7 +50,6 @@ jobs:
           ${{ runner.os }}-yarn-
     - name: Install dependencies
       run: |
-        yarn install && yarn update-webdriver --versions.chrome=80.0.3987.106
+        yarn install && yarn update-webdriver --versions.chrome=86.0.4240.22
     - name: Run end-to-end tests
       run: yarn e2e --webdriverUpdate=false
-      

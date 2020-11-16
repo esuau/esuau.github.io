@@ -10,7 +10,9 @@ describe('App', () => {
 
   it('should reroute to /bio', () => {
     page.navigateTo();
-    expect(browser.getCurrentUrl()).toEqual(browser.baseUrl + '#/bio');
+    browser.getCurrentUrl().then(value => {
+      expect(value).toEqual(browser.baseUrl);
+    });
   });
 
   it('should make bio navlink active', () => {
