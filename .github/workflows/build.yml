@@ -50,6 +50,6 @@ jobs:
           ${{ runner.os }}-yarn-
     - name: Install dependencies
       run: |
-        yarn install
+        yarn install && yarn update-webdriver --versions.chrome=86.0.4240.22
     - name: Run end-to-end tests
-      run: yarn e2e
+      run: yarn e2e --webdriverUpdate=false
