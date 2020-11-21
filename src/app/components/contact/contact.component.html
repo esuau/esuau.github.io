@@ -20,7 +20,7 @@
             <clr-icon shape="envelope"></clr-icon>
             Show email address
           </button>
-          <a *ngIf="emailVisible" href="mailto:{{emailAddress}}">{{emailAddress}}</a>
+          <span *ngIf="emailVisible">{{emailAddress}}</span>
           <h5>Encryption</h5>
           <a
             class="btn btn-outline"

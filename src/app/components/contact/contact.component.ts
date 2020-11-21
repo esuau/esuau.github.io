@@ -9,7 +9,7 @@ export class ContactComponent implements OnInit {
 
   emailVisible = false;
 
-  emailAddress = 'evan.suau@outlook.com';
+  emailAddress = 'evan.suau[at]outlook.com';
 
   socialList = [
     { name: 'twitter', link: 'https://twitter.com/evan_suau' },
