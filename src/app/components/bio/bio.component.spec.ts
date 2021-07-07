@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { BioComponent } from './bio.component';
+import { SITE_DATA } from '../../data';
 
 describe('BioComponent', () => {
   let component: BioComponent;
@@ -32,6 +33,11 @@ describe('BioComponent', () => {
   it('shoud include bio-content component', () => {
     const bioContent = fixture.debugElement.nativeElement.querySelector('app-bio-content');
     expect(bioContent).not.toBeNull();
+  });
+
+  it('should bind title from SITE_DATA', () => {
+    const bioTitle = fixture.debugElement.nativeElement.querySelector('#bio-title');
+    expect(bioTitle.textContent).toEqual(SITE_DATA.bio.title);
   });
 
   it('shoud have clickable labels', () => {
