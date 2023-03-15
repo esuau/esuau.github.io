@@ -90,20 +90,34 @@ a {
     border: .15rem solid lightgrey;
     border-radius: 10px;
     box-shadow: 10px 10px 5px lightgray;
-    margin: 5vh;
-    padding: 10vh;
+    margin: auto;
+    padding: 2vh;
+}
+
+@media screen and (min-width: 500px) {
+    .card {
+        margin: 1vh 2vh;
+        padding: 2vh 3vh;
+    }
 }
 
 @media screen and (min-width: 800px) {
     .card {
-        margin: 10vh;
-        padding: 10vh 20vh;
+        margin: 3vh 10vh;
+        padding: 5vh 10vh;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .card {
-        margin: 10vh 30vh;
-        padding: 10vh 25vh;
+        margin: 3vh 15vh;
+        padding: 5vh 15vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .card {
+        margin: 3vh 20vh;
+        padding: 5vh 15vh;
     }
 }
