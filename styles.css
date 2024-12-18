@@ -8,8 +8,8 @@ main {
 }
 
 img#profile-picture {
-    border-radius: 50%;
-    max-height: 20vh;
+    border-radius: 10%;
+    max-height: 30vh;
 }
 
 h1.title {
@@ -37,12 +37,13 @@ p {
 }
 
 .badge {
-    border: .05rem solid #000;
+    border: .08rem solid #000;
     border-radius: .6rem;
     color: #000;
+    display: inline-block;
     line-height: 2em;
     margin: .2rem;
-    padding: .3rem;
+    padding: .2rem .4rem;
     white-space: nowrap;
 }
 
@@ -64,7 +65,7 @@ p {
 }
 
 .button {
-    border: .06rem solid #0072a3;
+    border: .1rem solid #0072a3;
     border-radius: .4rem;
     color: #0072a3;
     cursor: pointer;
