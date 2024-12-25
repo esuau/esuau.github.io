@@ -78,7 +78,7 @@ p {
     background-color: aliceblue;
 }
 
-a {
+a.button {
     text-decoration: none;
 }
 
