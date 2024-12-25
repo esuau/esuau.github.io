@@ -9,7 +9,6 @@ main {
 
 img#profile-picture {
     border-radius: 10%;
-    max-height: 30vh;
 }
 
 h1.title {
