@@ -126,33 +126,33 @@ p {
 }
 
 .badge-software {
-    border-color: #16a34a;
-    background: #f0fdf4;
+    border-color: #f94144;
+    background: #feeceb;
 }
 
 .badge-cloud {
-    border-color: #7c3aed;
-    background: #f5f3ff;
+    border-color: #f9c74f;
+    background: #fff8e3;
 }
 
 .badge-delivery {
-    border-color: #0284c7;
-    background: #f0f9ff;
+    border-color: #90be6d;
+    background: #f2f8ec;
 }
 
 .badge-devops {
-    border-color: #ea580c;
-    background: #fff7ed;
+    border-color: #43aa8b;
+    background: #ebf7f3;
 }
 
 .badge-agile {
-    border-color: #92400e;
-    background: #fef7ed;
+    border-color: #277da1;
+    background: #e8f3f7;
 }
 
 .badge-ddd {
-    border-color: #64748b;
-    background: #fdf2f8;
+    border-color: #f3722c;
+    background: #fff1e8;
 }
 
 .contact-copy {
