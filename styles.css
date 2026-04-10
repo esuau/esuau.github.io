@@ -150,6 +150,11 @@ p {
     background: #fef7ed;
 }
 
+.badge-ddd {
+    border-color: #64748b;
+    background: #fdf2f8;
+}
+
 .contact-copy {
     margin-bottom: 0;
 }
