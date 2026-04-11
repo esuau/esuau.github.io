@@ -1,58 +1,206 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    background: #f3f6fb;
+    color: #475569;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
+a {
+    color: #0a66c2;
+}
+
+a:hover {
+    color: #084c94;
+}
+
+a:focus-visible,
+.button:focus-visible,
+.social-link:focus-visible {
+    outline: 3px solid #7dd3fc;
+    outline-offset: 4px;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 1rem 0.75rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.75rem 1.25rem;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.12);
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
     text-align: center;
-    color: #666;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
 }
 
 img#profile-picture {
-    border-radius: 10%;
+    display: block;
+    width: min(100%, 220px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18%;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
 }
 
-h1.title {
-    color: #000;
-    font-weight: normal;
-    margin-bottom: 0;
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-h2.subtitle {
-    font-size: 1.2em;
-    font-weight: normal;
-    margin-top: 0;
+.title {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.05;
 }
 
-h3.section-title {
-    color: #000;
-    font-weight: normal;
-    margin-top: 2rem;
-    margin-bottom: .6rem;
+.subtitle {
+    max-width: 36rem;
+    margin: 0.75rem auto 0;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.6;
+}
+
+.section {
+    margin-top: 2.5rem;
+    text-align: left;
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    color: #0f172a;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 p {
-    line-height: 1.5rem;
-    margin-top: 0;
+    margin: 0 0 1rem;
+    line-height: 1.75;
+}
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .badge {
-    border: .08rem solid #000;
-    border-radius: .6rem;
-    color: #000;
-    display: inline-block;
-    line-height: 2em;
-    margin: .2rem;
-    padding: .2rem .4rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.4rem 0.85rem;
+    color: #0f172a;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
     white-space: nowrap;
 }
 
+.badge-software {
+    border-color: #f94144;
+    background: #feeceb;
+}
+
+.badge-cloud {
+    border-color: #f9c74f;
+    background: #fff8e3;
+}
+
+.badge-delivery {
+    border-color: #90be6d;
+    background: #f2f8ec;
+}
+
+.badge-devops {
+    border-color: #43aa8b;
+    background: #ebf7f3;
+}
+
+.badge-observability {
+    border-color: #277da1;
+    background: #e8f3f7;
+}
+
+.badge-ddd {
+    border-color: #f3722c;
+    background: #fff1e8;
+}
+
+.contact-copy {
+    margin-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    color: inherit;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 18px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: inherit;
+    background: #eff6ff;
+    border-color: #93c5fd;
+    box-shadow: 0 12px 24px rgba(14, 165, 233, 0.12);
+    transform: translateY(-1px);
+}
+
+.social-link-label {
+    color: #0f172a;
+    font-weight: 600;
+}
+
 .social-icon {
-    background-size: cover;
-    cursor: pointer;
     display: inline-block;
-    margin: .5rem;
-    height: 3rem;
-    width: 3rem;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .social-icon.linkedin {
@@ -63,57 +211,81 @@ p {
     background-image: url(assets/github.svg);
 }
 
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
 .button {
-    border: .1rem solid #0072a3;
-    border-radius: .4rem;
-    color: #0072a3;
-    cursor: pointer;
-    font-size: .9rem;
-    padding: .6rem;
-    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.1rem;
+    color: #0a66c2;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
     white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #0a66c2;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
-    background-color: aliceblue;
-}
-
-a.button {
-    text-decoration: none;
-}
-
-.card {
-    border: .15rem solid lightgrey;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px lightgrey;
-    margin: auto;
-    padding: 2vh;
+    color: #084c94;
+    background-color: #eff6ff;
+    border-color: #084c94;
+    transform: translateY(-1px);
 }
 
 @media screen and (min-width: 500px) {
+    .page {
+        padding: 2rem;
+    }
+
     .card {
-        margin: 1vh 2vh;
-        padding: 2vh 3vh;
+        padding: 2.5rem;
     }
 }
 
 @media screen and (min-width: 800px) {
+    .page {
+        padding: 3rem;
+    }
+
     .card {
-        margin: 3vh 10vh;
-        padding: 5vh 10vh;
+        padding: 3.5rem;
+    }
+
+    .hero {
+        grid-template-columns: 220px minmax(0, 1fr);
+        text-align: left;
+    }
+
+    .profile-picture {
+        justify-content: flex-start;
+    }
+
+    .subtitle {
+        margin: 0.75rem 0 0;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .card {
-        margin: 3vh 15vh;
-        padding: 5vh 15vh;
+        padding: 4rem;
+    }
+
+    .section {
+        margin-top: 3rem;
     }
 }
 
 @media screen and (min-width: 2000px) {
     .card {
-        margin: 3vh 20vh;
-        padding: 5vh 15vh;
+        max-width: 1100px;
     }
 }
