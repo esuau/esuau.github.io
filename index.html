@@ -2,13 +2,15 @@
 <html lang="en-CA">
   <head>
     <meta charset="utf-8" />
-    <title>Evan Suau | Software Developer in Montreal</title>
+    <title data-i18n="pageTitle">Evan Suau | Software Developer in Montreal</title>
     <meta
       name="description"
+      data-i18n-attr="content:metaDescription"
       content="Evan Suau is a software developer in Montreal focused on back-end systems, cloud platforms, and reliable delivery practices."
     />
     <meta
       name="keywords"
+      data-i18n-attr="content:metaKeywords"
       content="evan suau, software developer, backend developer, cloud computing, devops, montreal, canada"
     />
     <meta name="author" content="Evan Suau" />
@@ -18,27 +20,39 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0f172a" />
-    <meta property="og:title" content="Evan Suau | Software Developer in Montreal" />
+    <meta
+      property="og:title"
+      data-i18n-attr="content:pageTitle"
+      content="Evan Suau | Software Developer in Montreal"
+    />
     <meta
       property="og:description"
-      content="Software developer in Montreal focused on back-end systems, cloud platforms, and reliable delivery practices."
+      data-i18n-attr="content:metaDescription"
+      content="Evan Suau is a software developer in Montreal focused on back-end systems, cloud platforms, and reliable delivery practices."
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Evan Suau" />
     <meta property="og:url" content="https://esuau.github.io/" />
     <meta property="og:image" content="https://esuau.github.io/assets/evan_suau.webp" />
-    <meta property="og:image:alt" content="Portrait of Evan Suau" />
+    <meta property="og:image:alt" data-i18n-attr="content:portraitAlt" content="Portrait of Evan Suau" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Evan Suau | Software Developer in Montreal" />
+    <meta
+      name="twitter:title"
+      data-i18n-attr="content:pageTitle"
+      content="Evan Suau | Software Developer in Montreal"
+    />
     <meta
       name="twitter:description"
-      content="Software developer in Montreal focused on back-end systems, cloud platforms, and reliable delivery practices."
+      data-i18n-attr="content:metaDescription"
+      content="Evan Suau is a software developer in Montreal focused on back-end systems, cloud platforms, and reliable delivery practices."
     />
     <meta name="twitter:image" content="https://esuau.github.io/assets/evan_suau.webp" />
-    <meta name="twitter:image:alt" content="Portrait of Evan Suau" />
+    <meta name="twitter:image:alt" data-i18n-attr="content:portraitAlt" content="Portrait of Evan Suau" />
     <link rel="canonical" href="https://esuau.github.io/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="translations.js" defer></script>
+    <script src="i18n.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -79,6 +93,39 @@
   <body>
     <main class="page">
       <article class="card">
+        <div class="card-toolbar">
+          <div
+            class="language-switcher"
+            data-language-switcher
+            data-i18n-attr="aria-label:languageSwitcherLabel"
+            role="group"
+            aria-label="Language selector"
+            hidden
+          >
+            <button
+              class="language-button"
+              type="button"
+              data-language-switch="fr"
+              data-i18n-attr="aria-label:switchToFrench;title:switchToFrench"
+              aria-label="Switch to French"
+              title="Switch to French"
+              aria-pressed="false"
+            >
+              FR
+            </button>
+            <button
+              class="language-button is-active"
+              type="button"
+              data-language-switch="en"
+              data-i18n-attr="aria-label:switchToEnglish;title:switchToEnglish"
+              aria-label="Switch to English"
+              title="Switch to English"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+          </div>
+        </div>
         <header class="hero">
           <picture class="profile-picture">
             <source media="(min-width: 1200px)" srcset="assets/evan_suau.webp" />
@@ -87,6 +134,7 @@
               src="assets/evan_suau_small.webp"
               alt="Portrait of Evan Suau"
               title="Photo by Julian Haber"
+              data-i18n-attr="alt:portraitAlt;title:portraitTitle"
               width="960"
               height="1200"
               fetchpriority="high"
@@ -95,22 +143,22 @@
           </picture>
 
           <div class="hero-copy">
-            <p class="eyebrow">Montreal, Quebec, Canada</p>
+            <p class="eyebrow" data-i18n="locationLabel">Montreal, Quebec, Canada</p>
             <h1 class="title">Evan Suau</h1>
-            <p class="subtitle">Software Developer @ Intact Lab</p>
+            <p class="subtitle" data-i18n="subtitle">Software Developer @ Intact Lab</p>
           </div>
         </header>
 
         <section class="section" aria-labelledby="about-title">
-          <h2 class="section-title" id="about-title">About</h2>
-          <p>
+          <h2 class="section-title" id="about-title" data-i18n="aboutTitle">About</h2>
+          <p data-i18n-rich="aboutBody1">
             I'm a software developer at
             <a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Intact_Financial">Intact Financial Corporation</a>
             in Montreal, QC, Canada. As part of
-            <a rel="noopener noreferrer" target="_blank" href="https://intactlab.ca/">Intact Lab</a>,
+            <a rel="noopener noreferrer" target="_blank" href="https://www.intactfc.com/about-us/intact-lab">Intact Lab</a>,
             I help build the back-end systems behind the company's mobile apps.
           </p>
-          <p>
+          <p data-i18n-rich="aboutBody2">
             Before that, I was a full-stack developer in the Corporate and
             Investment Banking division of
             <a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale">Société Générale</a>, where I worked on trading systems supporting the firm's capital
@@ -119,7 +167,7 @@
             at
             <a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/BRED_Banque_populaire">BRED Banque Populaire</a> in Paris, France.
           </p>
-          <p>
+          <p data-i18n-rich="aboutBody3">
             I hold a
             <a rel="noopener noreferrer" target="_blank" href="https://en.wikipedia.org/wiki/Dipl%C3%B4me_d%27Ing%C3%A9nieur">French engineer's degree</a>
             (M.Sc.Eng.) in Information Systems from
@@ -129,20 +177,20 @@
         </section>
 
         <section class="section" aria-labelledby="focus-title">
-          <h2 class="section-title" id="focus-title">Focus areas</h2>
+          <h2 class="section-title" id="focus-title" data-i18n="focusTitle">Focus areas</h2>
           <ul class="badge-list">
-            <li class="badge badge-software">Software engineering</li>
-            <li class="badge badge-ddd">Domain-driven design</li>
-            <li class="badge badge-cloud">APIs &amp; microservices</li>
-            <li class="badge badge-delivery">Continuous delivery</li>
-            <li class="badge badge-devops">Cloud platforms</li>
-            <li class="badge badge-observability">Observability</li>
+            <li class="badge badge-software" data-i18n="badgeSoftware">Software engineering</li>
+            <li class="badge badge-ddd" data-i18n="badgeDdd">Domain-driven design</li>
+            <li class="badge badge-cloud" data-i18n="badgeApis">APIs &amp; microservices</li>
+            <li class="badge badge-delivery" data-i18n="badgeDelivery">Continuous delivery</li>
+            <li class="badge badge-devops" data-i18n="badgeCloud">Cloud platforms</li>
+            <li class="badge badge-observability" data-i18n="badgeObservability">Observability</li>
           </ul>
         </section>
 
         <section class="section" aria-labelledby="connect-title">
-          <h2 class="section-title" id="connect-title">Connect</h2>
-          <p class="contact-copy">
+          <h2 class="section-title" id="connect-title" data-i18n="connectTitle">Connect</h2>
+          <p class="contact-copy" data-i18n="contactCopy">
             The easiest way to reach me is through the profiles below. My PGP
             public key is also available for encrypted communication.
           </p>
@@ -174,6 +222,7 @@
               rel="noopener noreferrer"
               target="_blank"
               href="https://pgp.mit.edu/pks/lookup?op=get&search=0x4A2EE6EF801BD78F"
+              data-i18n="downloadPgp"
             >
               Download PGP public key
             </a>
