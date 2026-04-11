@@ -27,11 +27,23 @@ const getBrowserLanguage = () => {
       ? navigator.languages
       : [navigator.language];
 
-  return browserLanguages.some(
-    (language) => typeof language === 'string' && language.toLowerCase().startsWith('fr'),
-  )
-    ? 'fr'
-    : 'en';
+  for (const language of browserLanguages) {
+    if (typeof language !== 'string') {
+      continue;
+    }
+
+    const normalizedLanguage = language.toLowerCase();
+
+    if (normalizedLanguage.startsWith('fr')) {
+      return 'fr';
+    }
+
+    if (normalizedLanguage.startsWith('en')) {
+      return 'en';
+    }
+  }
+
+  return 'en';
 };
 
 const createRichTranslationNode = (part) => {
